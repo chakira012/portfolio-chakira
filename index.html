@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+  <!-- Sécurité : politique de sécurité du contenu (limite les sources autorisées, mitige les injections/XSS) -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self';
+                 base-uri 'self';
+                 form-action 'self';
+                 frame-ancestors 'none';
+                 object-src 'none';
+                 img-src 'self' data:;
+                 script-src 'self';
+                 style-src 'self' https://fonts.googleapis.com;
+                 font-src 'self' https://fonts.gstatic.com;
+                 connect-src 'self'" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="color-scheme" content="light" />
+
+  <title>Chakira Aoujil — Audit, Contrôle Interne & Gestion des Risques</title>
+  <meta name="description" content="Portfolio de Chakira Aoujil — future diplômée en Audit & Contrôle, à la recherche d'un CDI en finance disponible à partir de septembre 2026. Audit, contrôle interne et gestion des risques." />
+  <meta name="author" content="Chakira Aoujil" />
+  <meta name="theme-color" content="#00965E" />
+
+  <!-- Open Graph (aperçu propre lors d'un partage) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Chakira Aoujil — Audit, Contrôle Interne & Gestion des Risques" />
+  <meta property="og:description" content="Future diplômée en Audit & Contrôle — CDI en finance recherché, disponible septembre 2026." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Barre de progression de lecture -->
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="brand" aria-label="Chakira Aoujil — accueil">
+        <span class="brand__star" aria-hidden="true"></span>
+        <span class="brand__name">Chakira<strong>Aoujil</strong></span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav__menu" id="navMenu" aria-label="Navigation principale">
+        <a href="#profil" class="nav__link">Profil</a>
+        <a href="#experiences" class="nav__link">Expériences</a>
+        <a href="#competences" class="nav__link">Compétences</a>
+        <a href="#formation" class="nav__link">Formation</a>
+        <a href="#contact" class="nav__link nav__link--cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__grid">
+        <div class="hero__text">
+          <p class="hero__eyebrow reveal">Disponible · CDI · Septembre 2026</p>
+          <h1 class="hero__title reveal">
+            <span>Chakira</span>
+            <span class="hero__title--accent">Aoujil</span>
+          </h1>
+          <p class="hero__role reveal">Audit&nbsp;· Contrôle Interne&nbsp;· Gestion des Risques</p>
+          <p class="hero__lead reveal">
+            Future diplômée d'un Master Audit &amp; Contrôle (Programme Grande École),
+            à la recherche d'un <strong>CDI en finance</strong>. Rigueur,
+            culture du risque et fiabilisation de la donnée au cœur de ma démarche.
+          </p>
+          <div class="hero__actions reveal">
+            <a href="#contact" class="btn btn--solid">Me contacter</a>
+            <a href="#experiences" class="btn btn--ghost">Voir mon parcours</a>
+          </div>
+          <ul class="hero__facts reveal" aria-label="Informations clés">
+            <li><strong>4+</strong><span>expériences en finance &amp; risques</span></li>
+            <li><strong>3</strong><span>langues parlées</span></li>
+            <li><strong>2026</strong><span>diplômée — Grande École</span></li>
+          </ul>
+        </div>
+
+        <div class="hero__media reveal">
+          <div class="photo">
+            <div class="photo__ring" aria-hidden="true"></div>
+            <!-- Déposez votre image nommée photo.jpg dans le même dossier -->
+            <img id="profilePhoto" class="photo__img" src="photo.jpg" alt="Portrait de Chakira Aoujil"
+                 width="420" height="420" decoding="async" />
+            <div class="photo__fallback" id="photoFallback" aria-hidden="true">CA</div>
+          </div>
+        </div>
+      </div>
+      <a href="#profil" class="scroll-cue" aria-label="Défiler vers le bas">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ============ PROFIL ============ -->
+    <section class="section" id="profil">
+      <div class="section__head reveal">
+        <span class="section__index">01</span>
+        <h2 class="section__title">Profil</h2>
+      </div>
+      <div class="profil reveal">
+        <p>
+          Étudiante en <strong>Master Audit &amp; Contrôle</strong> en alternance chez
+          <strong>BNP Paribas</strong>, je me spécialise dans le contrôle interne,
+          l'audit et la gestion des risques. J'interviens sur les arrêtés comptables,
+          la fiabilisation financière, l'exécution de contrôles de niveau&nbsp;1 et&nbsp;2,
+          ainsi que le pilotage de projets et l'automatisation du monitoring.
+        </p>
+        <p>
+          Mon objectif : décrocher un <strong>CDI en finance</strong> où je pourrai
+          mettre au service d'une équipe ma rigueur, mon sens de la conformité et ma
+          capacité à dialoguer avec l'ensemble des métiers, dans une logique
+          auditeur&nbsp;/&nbsp;audité.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ EXPÉRIENCES ============ -->
+    <section class="section section--alt" id="experiences">
+      <div class="section__head reveal">
+        <span class="section__index">02</span>
+        <h2 class="section__title">Expériences professionnelles</h2>
+      </div>
+
+      <ol class="timeline">
+        <li class="tl reveal">
+          <div class="tl__dot" aria-hidden="true"></div>
+          <div class="tl__card">
+            <div class="tl__top">
+              <div>
+                <h3 class="tl__company">BNP Paribas — RHG GAP <span>(Entité Contrôle &amp; Risques)</span></h3>
+                <p class="tl__role">Contrôle interne, audit &amp; risques · Alternance</p>
+              </div>
+              <div class="tl__meta">
+                <span class="tl__date">Sept. 2024 — Août 2026</span>
+                <span class="tl__place">Île-de-France</span>
+              </div>
+            </div>
+            <div class="tl__groups">
+              <div class="tl__group">
+                <h4>Arrêtés comptables &amp; fiabilisation financière</h4>
+                <ul>
+                  <li>Contribution aux arrêtés mensuels, trimestriels et annuels : revue des flux, cohérence des écritures et fiabilisation des données.</li>
+                  <li>Justification des comptes, documentation des ajustements et analyse des écarts dans le respect du reporting interne.</li>
+                  <li>Réalisation de rapprochements comptables et de paie, résolution des anomalies.</li>
+                </ul>
+              </div>
+              <div class="tl__group">
+                <h4>Contrôle interne &amp; gestion des risques</h4>
+                <ul>
+                  <li>Exécution de contrôles de premier et second niveau sur les processus financiers, comptables et RH via l'outil 360.</li>
+                  <li>Identification, analyse et documentation des incidents opérationnels et financiers (fiches incidents, causes racines, impacts).</li>
+                  <li>Suivi des plans d'actions correctifs et préventifs et évaluation de leur efficacité.</li>
+                </ul>
+              </div>
+              <div class="tl__group">
+                <h4>Pilotage de projets &amp; automatisation</h4>
+                <ul>
+                  <li>Pilotage du projet IH&nbsp;/&nbsp;réclamations : structuration du dispositif de gestion des incidents, coordination des parties prenantes et reporting.</li>
+                  <li>Participation à l'automatisation des contrôles et du monitoring (tableaux de bord, indicateurs, suivi via 360).</li>
+                </ul>
+              </div>
+              <div class="tl__group">
+                <h4>Gouvernance &amp; communication transverse</h4>
+                <ul>
+                  <li>Animation de comités risques et incidents : reporting, préparation des supports et présentation des analyses à la direction et aux équipes opérationnelles.</li>
+                  <li>Communication transverse avec les équipes finance, paie, RH, comptabilité et contrôle.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="tl reveal">
+          <div class="tl__dot" aria-hidden="true"></div>
+          <div class="tl__card">
+            <div class="tl__top">
+              <div>
+                <h3 class="tl__company">Audit Conseil Joti et Associés</h3>
+                <p class="tl__role">Assistant comptable · Stage</p>
+              </div>
+              <div class="tl__meta">
+                <span class="tl__date">Juin — Juil. 2024</span>
+                <span class="tl__place">Montpellier, France</span>
+              </div>
+            </div>
+            <ul class="tl__list">
+              <li>Saisie des écritures comptables sur Comptabilité Expert (ACD groupe), à partir d'un traitement des pièces sur DEXT.</li>
+              <li>Révision des comptes fournisseurs et clients : lettrage.</li>
+              <li>Établissement des factures manquantes.</li>
+              <li>Aide à la préparation de la déclaration de TVA.</li>
+              <li>Participation à l'établissement d'une liasse fiscale.</li>
+              <li>Établissement des formalités d'approbation des comptes annuels.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="tl reveal">
+          <div class="tl__dot" aria-hidden="true"></div>
+          <div class="tl__card">
+            <div class="tl__top">
+              <div>
+                <h3 class="tl__company">AFDET — Occitanie / Languedoc-Roussillon</h3>
+                <p class="tl__role">Assistant comptable · Bénévolat</p>
+              </div>
+              <div class="tl__meta">
+                <span class="tl__date">Janv. — Juin 2024</span>
+                <span class="tl__place">Montpellier, France</span>
+              </div>
+            </div>
+            <ul class="tl__list">
+              <li>Élaboration de prévisionnels financiers et de budgets dans le cadre de demandes de subventions.</li>
+              <li>Supervision et contrôle des opérations bancaires et des flux financiers de l'association, dans le respect des règles de conformité et des procédures internes.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="tl reveal">
+          <div class="tl__dot" aria-hidden="true"></div>
+          <div class="tl__card">
+            <div class="tl__top">
+              <div>
+                <h3 class="tl__company">Groupe Attijariwafa Bank</h3>
+                <p class="tl__role">Contrôleur permanent · Stage</p>
+              </div>
+              <div class="tl__meta">
+                <span class="tl__date">Juil. — Sept. 2023</span>
+                <span class="tl__place">Meknès, Maroc</span>
+              </div>
+            </div>
+            <ul class="tl__list">
+              <li>Réalisation des contrôles opérationnels de 1er niveau.</li>
+              <li>Remontée des alertes pour le contrôleur N2 et/ou l'audit, traitement des alertes.</li>
+              <li>Révision de processus de contrôle adaptés à la réglementation en vigueur.</li>
+              <li>Évaluation des dossiers complexes, analyse des risques et mise en œuvre d'actions correctives.</li>
+              <li>Sensibilisation et instauration d'une culture du risque au sein des agences.</li>
+              <li>Audit de conformité documentaire, rédaction des rapports mensuels.</li>
+              <li>Création du premier plan de contrôle groupe, animation des formations.</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ COMPÉTENCES ============ -->
+    <section class="section" id="competences">
+      <div class="section__head reveal">
+        <span class="section__index">03</span>
+        <h2 class="section__title">Compétences</h2>
+      </div>
+
+      <div class="skills">
+        <div class="skills__col reveal">
+          <h3 class="skills__heading">Audit &amp; risques</h3>
+          <ul class="tags">
+            <li>Gouvernance des risques</li>
+            <li>Contrôle interne (Niveau 1 &amp; 2)</li>
+            <li>Conduite des audits</li>
+            <li>Cartographie des risques</li>
+            <li>Gestion des alertes LCB-FT</li>
+            <li>Rédaction des procédures</li>
+            <li>Reporting réglementaire</li>
+            <li>Suivi des plans d'action</li>
+            <li>Sensibilisation conformité</li>
+            <li>Analyse des données</li>
+            <li>Coordination d'équipe</li>
+            <li>Optimisation des processus</li>
+            <li>Développement organisationnel</li>
+          </ul>
+        </div>
+
+        <div class="skills__col reveal">
+          <h3 class="skills__heading">Outils &amp; informatique</h3>
+          <ul class="tags">
+            <li>Excel avancé (TCD, fonctions)</li>
+            <li>Risk 360</li>
+            <li>SAP</li>
+            <li>Pack Office (maîtrisé)</li>
+            <li>EBP</li>
+            <li>ACD / Comptabilité Expert</li>
+            <li>DEXT</li>
+          </ul>
+
+          <h3 class="skills__heading skills__heading--mt">Certifications</h3>
+          <ul class="certs">
+            <li><span class="certs__icon" aria-hidden="true"></span> ISO 31000 — CIA</li>
+            <li><span class="certs__icon" aria-hidden="true"></span> Audit interne</li>
+          </ul>
+        </div>
+
+        <div class="skills__col reveal">
+          <h3 class="skills__heading">Langues</h3>
+          <ul class="lang">
+            <li>
+              <div class="lang__row"><span>Français</span><em>Bilingue</em></div>
+              <div class="bar"><i data-lvl="100"></i></div>
+            </li>
+            <li>
+              <div class="lang__row"><span>Anglais</span><em>Courant</em></div>
+              <div class="bar"><i data-lvl="85"></i></div>
+            </li>
+            <li>
+              <div class="lang__row"><span>Espagnol</span><em>Courant</em></div>
+              <div class="bar"><i data-lvl="85"></i></div>
+            </li>
+          </ul>
+
+          <h3 class="skills__heading skills__heading--mt">Centres d'intérêt</h3>
+          <ul class="tags tags--soft">
+            <li>Voyage</li>
+            <li>Cuisine</li>
+            <li>Travail associatif</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FORMATION ============ -->
+    <section class="section section--alt" id="formation">
+      <div class="section__head reveal">
+        <span class="section__index">04</span>
+        <h2 class="section__title">Formation</h2>
+      </div>
+
+      <div class="edu">
+        <article class="edu__card reveal">
+          <span class="edu__years">2023 — 2026</span>
+          <h3>Master Audit &amp; Contrôle</h3>
+          <p class="edu__sub">Programme Grande École · Montpellier Business School</p>
+          <p class="edu__desc">Corporate Finance · Contrôle de gestion · Comptabilité · Audit.</p>
+        </article>
+        <article class="edu__card reveal">
+          <span class="edu__years">2021 — 2023</span>
+          <h3>Classes Préparatoires aux Grandes Écoles — ECS</h3>
+          <p class="edu__sub">Lycée Moulay Ismail · Meknès, Maroc</p>
+          <p class="edu__desc">Mathématiques approfondies · Géopolitique · Comptabilité · Droit · Informatique.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section--contact" id="contact">
+      <div class="section__head reveal">
+        <span class="section__index">05</span>
+        <h2 class="section__title">Contact</h2>
+      </div>
+      <div class="contact reveal">
+        <p class="contact__lead">Une opportunité en finance, audit ou gestion des risques&nbsp;? Discutons-en.</p>
+        <div class="contact__cards">
+          <a class="contact__card" id="emailCard" href="#" rel="noopener noreferrer">
+            <span class="contact__icon" aria-hidden="true">✉</span>
+            <span class="contact__label">Email</span>
+            <span class="contact__value" id="emailValue">Cliquez pour afficher</span>
+          </a>
+          <a class="contact__card" id="phoneCard" href="#" rel="noopener noreferrer">
+            <span class="contact__icon" aria-hidden="true">☎</span>
+            <span class="contact__label">Téléphone</span>
+            <span class="contact__value" id="phoneValue">Cliquez pour afficher</span>
+          </a>
+          <div class="contact__card contact__card--static">
+            <span class="contact__icon" aria-hidden="true">⚲</span>
+            <span class="contact__label">Localisation</span>
+            <span class="contact__value">Paris, France</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Chakira Aoujil — Audit, contrôle interne &amp; gestion des risques.</p>
+    <p class="footer__back"><a href="#hero">Retour en haut ↑</a></p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
